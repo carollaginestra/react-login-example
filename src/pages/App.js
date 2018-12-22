@@ -8,6 +8,8 @@ import {
 
 import './App.css';
 import HomePage from './HomePage';
+import AboutPage from './AboutPage';
+import Menu from '../components/Menu';
 
 
 class App extends Component {
@@ -15,9 +17,16 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Container>
+          <Menu />
 
           <Switch>
             <Route path="/" exact component={HomePage} />
+            <Route path="/about" component={AboutPage} />
+            <Route render={() => {
+              return (
+                <div>Página não encontrada.</div>
+              );
+            }} />
           </Switch>
 
         </Container>
