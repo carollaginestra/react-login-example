@@ -6,8 +6,8 @@ import Content from './Content';
 const Article = (props) => {
     return (
         <div>
-            <Welcome nome={props.name} />
-            <Content texto={props.text} />
+            <Welcome name={props.name} />
+            <Content text={props.text} />
         </div>
     );
 }
