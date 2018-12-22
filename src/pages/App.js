@@ -8,6 +8,7 @@ import {
 
 import './App.css';
 import HomePage from './HomePage';
+import AboutPage from './AboutPage';
 import Menu from '../components/Menu';
 
 
@@ -20,6 +21,7 @@ class App extends Component {
 
           <Switch>
             <Route path="/" exact component={HomePage} />
+            <Route path="/about" component={AboutPage} />
             <Route render={() => {
               return (
                 <div>Página não encontrada.</div>
