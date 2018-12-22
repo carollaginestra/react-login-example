@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Welcome from './Welcome';
 import Content from './Content';
 
 const Article = (props) => {
     return (
         <div>
-            <Welcome name={props.name} />
-            <Content text={props.text} />
+            <Content name={props.name} text={props.text} />
         </div>
     );
 }

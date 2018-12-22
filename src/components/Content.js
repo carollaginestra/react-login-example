@@ -2,7 +2,11 @@ import React from 'react';
 
 const Content = (props) => {
     return (
-        <p>{props.text}</p>
+        <div>
+            <h1>{props.name}</h1>
+
+            <p>{props.text}</p>
+        </div>
     );
 }
 
