@@ -8,6 +8,7 @@ import {
 
 import './App.css';
 import HomePage from './HomePage';
+import Menu from '../components/Menu';
 
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Container>
+          <Menu />
 
           <Switch>
             <Route path="/" exact component={HomePage} />
