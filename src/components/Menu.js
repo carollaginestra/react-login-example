@@ -3,6 +3,8 @@ import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import { Link, withRouter } from 'react-router-dom';
 
+import { isAuthenticated, setAuthenticated } from '../utils/LoginManager';
+
 const Menu = (props) => {
     return (
         <Nav>
@@ -21,6 +23,19 @@ const Menu = (props) => {
                     About
                 </Link>
             </NavItem>
+            {isAuthenticated() ? (
+                <NavItem>
+                    <NavLink
+                        href="#!"
+                        onClick={() => {
+                            setAuthenticated(false);
+                            props.history.push('/');
+                        }}
+                    >
+                        Logout
+                    </NavLink>
+                </NavItem>
+            ) : null }
         </Nav>
     )
 

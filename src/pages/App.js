@@ -9,6 +9,9 @@ import {
 import './App.css';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
+import TasksPage from './TasksPage';
+import LoginPage from './LoginPage';
+import PrivateRoute from '../components/PrivateRoute';
 import Menu from '../components/Menu';
 
 
@@ -21,7 +24,9 @@ class App extends Component {
 
           <Switch>
             <Route path="/" exact component={HomePage} />
+            <PrivateRoute path="/tasks" component={TasksPage} />
             <Route path="/about" component={AboutPage} />
+            <Route path="/login" component={LoginPage} />
             <Route render={() => {
               return (
                 <div>Página não encontrada.</div>
