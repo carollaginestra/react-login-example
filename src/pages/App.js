@@ -9,6 +9,7 @@ import {
 import './App.css';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
+import TasksPage from './TasksPage';
 import Menu from '../components/Menu';
 
 
@@ -21,6 +22,7 @@ class App extends Component {
 
           <Switch>
             <Route path="/" exact component={HomePage} />
+            <Route path="/tasks" component={TasksPage} />
             <Route path="/about" component={AboutPage} />
             <Route render={() => {
               return (
